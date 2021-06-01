@@ -32,6 +32,10 @@ public class PasswordTest {
     @DisplayName("pass is longer than 25")
     public void testIsValid_Scenario3(){ assertFalse(pw.checkPassword("Pb5(i45!tan5634891dddj75bshvdsmioeghosf926$?!%")); }
 
+    @Test
+    @DisplayName("pass is empty")
+    public void testIsValid_Scenario15(){ assertFalse(pw.checkPassword("")); }
+
     //• Das Kennwort muss aus Klein- und Großbuchstaben bestehen.
     @Test
     @DisplayName("pass contains only uppercase letters")
@@ -52,9 +56,44 @@ public class PasswordTest {
     @DisplayName("pass contains no characters")
     public void testIsValid_Scenario7(){ assertFalse(pw.checkPassword("zuawfew656GDGHJ")); }
 
+    /*
+
     // Wenn Zahlen enthalten sind dürfen nicht mehr als zwei Zahlen fortlaufend sein z.B.
     //123 oder 456 sind nicht erlaubt.
+
+    @Test
+    @DisplayName("pass with more than 2 ongoing numbers")
+    public void testIsValid_Scenario9(){ assertFalse(pw.checkPassword("zuawfew123GDGHJ")); }
+
+    @Test
+    @DisplayName("pass with 7 ongoing numbers")
+    public void testIsValid_Scenario10(){ assertFalse(pw.checkPassword("zuawfew3456789GHJ")); }
+
+    @Test
+    @DisplayName("pass with 2 ongoing numbers than break than again 2 ongoing numbers")
+    public void testIsValid_Scenario11(){ assertTrue(pw.checkPassword("zuawfew34956GHJ")); }
+
+    @Test
+    @DisplayName("pass with 2 ongoing numbers")
+    public void testIsValid_Scenario16(){ assertTrue(pw.checkPassword("zuawfew34GHJ")); }
+
+    */
+    /*
+
     //• Es darf nicht eine Zahl öfters als 3-mal hintereinander kommen z.B. 1111 ist nicht
     //erlaubt
+
+    @Test
+    @DisplayName("pass contains 4 of the same number back to back")
+    public void testIsValid_Scenario12(){ assertFalse(pw.checkPassword("zuawfew6666DGHJ")); }
+
+    @Test
+    @DisplayName("pass contains 9 of the same number back to back")
+    public void testIsValid_Scenario13(){ assertFalse(pw.checkPassword("zu555555555GDGHJ")); }
+
+    @Test
+    @DisplayName("pass contains 3 of the same number back to back")
+    public void testIsValid_Scenario14(){ assertTrue(pw.checkPassword("zu111GDGHJ")); }
+    */
 
 }
