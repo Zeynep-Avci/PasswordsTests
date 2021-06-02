@@ -20,7 +20,7 @@ public class PasswordTest {
     //Test is correct
     @Test
     @DisplayName("pass is valid")
-    public void testIsValid_Scenario1(){ assertTrue(pw.checkPassword("PasZU2od3$?!%9id"));
+    public void testIsValid_Scenario1(){ assertTrue(pw.checkPassword("PasZU222od3$?!%9id"));
     }
 
     //Das Kennwort muss zwischen 8 und 25 Zeichen lang sein
@@ -78,7 +78,7 @@ public class PasswordTest {
     public void testIsValid_Scenario16(){ assertTrue(pw.checkPassword("zuawfew34GHJ")); }
 
     */
-    /*
+
 
     //• Es darf nicht eine Zahl öfters als 3-mal hintereinander kommen z.B. 1111 ist nicht
     //erlaubt
@@ -86,14 +86,5 @@ public class PasswordTest {
     @Test
     @DisplayName("pass contains 4 of the same number back to back")
     public void testIsValid_Scenario12(){ assertFalse(pw.checkPassword("zuawfew6666DGHJ")); }
-
-    @Test
-    @DisplayName("pass contains 9 of the same number back to back")
-    public void testIsValid_Scenario13(){ assertFalse(pw.checkPassword("zu555555555GDGHJ")); }
-
-    @Test
-    @DisplayName("pass contains 3 of the same number back to back")
-    public void testIsValid_Scenario14(){ assertTrue(pw.checkPassword("zu111GDGHJ")); }
-    */
 
 }
