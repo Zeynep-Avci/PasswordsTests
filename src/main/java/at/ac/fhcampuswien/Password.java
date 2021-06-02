@@ -26,24 +26,39 @@ public class Password {
         //• Das Kennwort muss Zahlen enthalten = .*[0-9]
         //• Das Kennwort muss mindestens eines der folgenden Sonderzeichen enthalten:
         //()#$?!%/@ Andere Sonderzeichen sind nicht erlaubt = .*[()#$?!%/@]
-        //• Es darf nicht eine Zahl öfters als 3-mal hintereinander kommen z.B. 1111 ist nicht
-        //erlaubt = .\d{0,3}
 
-        if(pass.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[()#$?!%/@]).\\d{0,3}.{8,25}$")) {
+        if(pass.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[()#$?!%/@]).{8,25}$")) {
             return true;
+            /*
+        }else if(pass.matches("\\d{0,3}")){
+            return false;
+            */
+        }else if (pass.matches(".*[1]{4,}.*") || pass.matches(".*[2]{4,}.*") || pass.matches(".*[3]{4,}.*")
+                || pass.matches(".*[4]{4,}.*") || pass.matches(".*[5]{4,}.*") || pass.matches(".*[6]{4,}.*")
+                || pass.matches(".*[7]{4,}.*") || pass.matches(".*[8]{4,}.*") || pass.matches(".*[9]{4,}.*")
+                || pass.matches(".*[0]{4,}.*")){
+            return false;
         }else{
             return false;
         }
     }
-/*
-    public boolean checkPassword2(String pass){
-        if (pass.matches("\\d{0,3}")){
-            return true;
-        }else{
+
+    /*
+    //• Es darf nicht eine Zahl öfters als 3-mal hintereinander kommen z.B. 1111 ist nicht
+    //erlaubt = {4,} bedeutet 4 oder mehr..[1] steht z.B für die Zahl 1
+    public boolean checkPassword2(String pass) {
+        if (pass.matches(".*[1]{4,}.*") || pass.matches(".*[2]{4,}.*") || pass.matches(".*[3]{4,}.*")
+                || pass.matches(".*[4]{4,}.*") || pass.matches(".*[5]{4,}.*") || pass.matches(".*[6]{4,}.*")
+                || pass.matches(".*[7]{4,}.*") || pass.matches(".*[8]{4,}.*") || pass.matches(".*[9]{4,}.*")
+                || pass.matches(".*[0]{4,}.*")) {
             return false;
+        } else {
+            return true;
         }
     }
     */
+
+
     /*
     public boolean checkPassword(String pass) {
         // Wenn Zahlen enthalten sind dürfen nicht mehr als zwei Zahlen fortlaufend sein z.B.
