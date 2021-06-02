@@ -33,17 +33,12 @@ public class Password {
         }else if(pass.matches("\\d{0,3}")){
             return false;
             */
-        }else if (pass.matches(".*[1]{4,}.*") || pass.matches(".*[2]{4,}.*") || pass.matches(".*[3]{4,}.*")
-                || pass.matches(".*[4]{4,}.*") || pass.matches(".*[5]{4,}.*") || pass.matches(".*[6]{4,}.*")
-                || pass.matches(".*[7]{4,}.*") || pass.matches(".*[8]{4,}.*") || pass.matches(".*[9]{4,}.*")
-                || pass.matches(".*[0]{4,}.*")){
-            return false;
         }else{
             return false;
         }
     }
 
-    /*
+
     //• Es darf nicht eine Zahl öfters als 3-mal hintereinander kommen z.B. 1111 ist nicht
     //erlaubt = {4,} bedeutet 4 oder mehr..[1] steht z.B für die Zahl 1
     public boolean checkPassword2(String pass) {
@@ -56,7 +51,7 @@ public class Password {
             return true;
         }
     }
-    */
+
 
 
     /*

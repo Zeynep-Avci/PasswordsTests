@@ -85,10 +85,10 @@ public class PasswordTest {
 
     @Test
     @DisplayName("pass contains 4 of the same number back to back")
-    public void testIsValid_Scenario12(){ assertFalse(pw.checkPassword("zuawfew6666DGHJ")); }
+    public void testIsValid_Scenario12(){ assertFalse(pw.checkPassword2("zuawfew6666DGHJ")); }
 
     @Test
     @DisplayName("pass contains 4 of the same number back to back")
-    public void testIsValid_Scenario13(){ assertTrue(pw.checkPassword("zuawfew666DGHJ")); }
+    public void testIsValid_Scenario13(){ assertTrue(pw.checkPassword2("zuawfew666DGHJ")); }
 
 }
