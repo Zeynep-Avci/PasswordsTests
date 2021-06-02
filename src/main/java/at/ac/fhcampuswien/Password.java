@@ -31,7 +31,7 @@ public class Password {
             return true;
             /*
         }else if(pass.matches("\\d{0,3}")){
-            return false;
+            return true;
             */
         }else{
             return false;
